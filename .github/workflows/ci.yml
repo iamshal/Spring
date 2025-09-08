@@ -28,10 +28,12 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
         
     - name: Install Playwright browsers
-      run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install"
+      run: |
+        mvn dependency:resolve
+        mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install chromium"
       
     - name: Run tests
-      run: mvn clean test
+      run: mvn clean test -Dplaywright.headless=true
       env:
         PLAYWRIGHT_HEADLESS: true
         
