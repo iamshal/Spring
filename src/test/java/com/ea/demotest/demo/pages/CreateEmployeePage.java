@@ -25,8 +25,8 @@ public class CreateEmployeePage {
     public void createEmployee(String name, String durationWorked, String email, String salary, String grade) {
         txtName.fill(name);
         txtDurationWorked.fill(durationWorked);
-        txtSalary.fill(salary);
         txtEmail.fill(email);
+        txtSalary.fill(salary);
         ddlGrade.selectOption(grade);
         btnCreate.click();
     }

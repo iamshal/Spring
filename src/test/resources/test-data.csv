@@ -1,0 +1,4 @@
+TestCase,Username,Password,Email,Salary,Department,DurationWorked,ExpectedResult
+TC001,admin,password,admin@test.com,50000,Middle,8,Success
+TC002,user1,pass123,user1@test.com,30000,Senior,8,Success
+TC003,user2,pass456,user2@test.com,40000,Junior,8,Success
